@@ -1,85 +1,102 @@
 [
   {
+    "id": "E6th",
     "message": "E on the 6th string",
     "img": "/notes/E6th.png",
     "sound": "/notes/E6th.mp3"
   },
   {
+    "id": "F6th",
     "message": "F on the 6th string",
     "img": "/notes/F6th.png",
     "sound": "/notes/F6th.mp3"
   },
   {
+    "id": "G6th",
     "message": "G on the 6th string",
     "img": "/notes/G6th.png",
     "sound": "/notes/G6th.mp3"
   },
   {
+    "id": "A5th",
     "message": "A on the 5th string",
     "img": "/notes/A5th.png",
     "sound": "/notes/A5th.mp3"
   },
   {
+    "id": "B5th",
     "message": "B on the 5th string",
     "img": "/notes/B5th.png",
     "sound": "/notes/B5th.mp3"
   },
   {
+    "id": "C5th",
     "message": "C on the 5th string",
     "img": "/notes/C5th.png",
     "sound": "/notes/C5th.mp3"
   },
   {
+    "id": "D4th",
     "message": "D on the 4th string",
     "img": "/notes/D4th.png",
     "sound": "/notes/D4th.mp3"
   },
   {
+    "id": "E4th",
     "message": "E on the 4th string",
     "img": "/notes/E4th.png",
     "sound": "/notes/E4th.mp3"
   },
   {
+    "id": "F4th",
     "message": "F on the 4th string",
     "img": "/notes/F4th.png",
     "sound": "/notes/F4th.mp3"
   },
   {
+    "id": "G3rd",
     "message": "G on the 3rd string",
     "img": "/notes/G3rd.png",
     "sound": "/notes/G3rd.mp3"
   },
   {
+    "id": "A3rd",
     "message": "A on the 3rd string",
     "img": "/notes/A3rd.png",
     "sound": "/notes/A3rd.mp3"
   },
   {
+    "id": "B2nd",
     "message": "B on the 2nd string",
     "img": "/notes/B2nd.png",
     "sound": "/notes/B2nd.mp3"
   },
   {
+    "id": "C2nd",
     "message": "C on the 2nd string",
     "img": "/notes/C2nd.png",
     "sound": "/notes/C2nd.mp3"
   },
   {
+    "id": "D2nd",
     "message": "D on the 2nd string",
     "img": "/notes/D2nd.png",
     "sound": "/notes/D2nd.mp3"
   },
   {
+    "id": "E1st",
     "message": "E on the 1st string",
     "img": "/notes/E1st.png",
     "sound": "/notes/E1st.mp3"
   },
   {
+    "id": "F1st",
     "message": "F on the 1st string",
     "img": "/notes/F1st.png",
     "sound": "/notes/F1st.mp3"
   },
   {
+    "id": "G1st",
     "message": "G on the 1st string",
     "img": "/notes/G1st.png",
     "sound": "/notes/G1st.mp3"

@@ -4,6 +4,7 @@ import { random } from 'lodash'
 import NOTES from './notes.json'
 
 type Note = {
+  id: string
   message: string,
   img: string
   sound: HTMLAudioElement
@@ -22,21 +23,25 @@ function reset() {
   notes.value = NOTES.map((val) => ({
     ...val,
     sound: new Audio(val.sound),
-    repeat: random(1, 2),
+    repeat: random(0, 1),
   }))
   hasShown.value = false
   selectNote()
 }
 
 function selectNote() {
-  const index = random(0, notes.value.length - 1)
-  const currentNote = notes.value[index]
+  let currentNote: Note
+  let index: number = -1 
+  do {
+    const index = random(0, notes.value.length - 1)
+    currentNote = notes.value[index]
+  } while(currentNote?.id === note.value?.id)
   note.value = currentNote 
-  if (currentNote.repeat === 1) {
+  if (currentNote.repeat === 0) {
     notes.value = notes.value.filter((n, i) => i !== index)
     return
   }
-  notes.value[index].repeat = currentNote.repeat - 1
+  if (index !== -1) notes.value[index].repeat = currentNote.repeat - 1
 }
 
 function handleButtonPress() {
@@ -57,7 +62,7 @@ function handleButtonPress() {
     <div class="image">
       <img :src="note?.img" alt="">
     </div>
-    <div :class="{blur: !hasShown}" class="answer">{{ hasShown ? note?.message : 'Press Show Answer Button' }}</div>
+    <div :class="{blur: !hasShown}" class="answer">{{ hasShown ? note?.message : 'Press Show Answer' }}</div>
     <button @click="handleButtonPress">{{ hasShown ? 'Next' : 'Show Answer' }}</button>
   </div> 
 </template>
