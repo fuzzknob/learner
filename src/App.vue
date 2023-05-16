@@ -68,11 +68,11 @@ function handleButtonPress() {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-bottom: 160px;
 }
 
 .image {
-  width: 500px;
+  max-width: 500px;
+  padding: 0 15px;
 }
 
 .image img {
