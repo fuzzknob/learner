@@ -6,7 +6,7 @@ import NOTES from './notes.json'
 type Note = {
   message: string,
   img: string
-  sound: string
+  sound: HTMLAudioElement
   repeat: number
 }
 
@@ -19,8 +19,9 @@ onMounted(() => {
 })
 
 function reset() {
-  notes.value = NOTES.map((noteVal) => ({
-    ...noteVal,
+  notes.value = NOTES.map((val) => ({
+    ...val,
+    sound: new Audio(val.sound),
     repeat: random(1, 2),
   }))
   hasShown.value = false
@@ -45,8 +46,7 @@ function handleButtonPress() {
     hasShown.value = false
     return
   }
-  const audio = new Audio(note.value?.sound)
-  audio.play()
+  note.value?.sound.play()
   hasShown.value = true
 }
 
