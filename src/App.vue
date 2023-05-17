@@ -17,6 +17,12 @@ const hasShown = ref(false)
 
 onMounted(() => {
   reset()
+  document.addEventListener('keydown', (e) => {
+    if (e.code === 'Space') {
+      e.preventDefault()
+      handleButtonPress()
+    }
+  })
 })
 
 function reset() {
@@ -63,7 +69,7 @@ function handleButtonPress() {
       <img :src="note?.img" alt="">
     </div>
     <div :class="{blur: !hasShown}" class="answer">{{ hasShown ? note?.message : 'Press Show Answer' }}</div>
-    <button @click="handleButtonPress">{{ hasShown ? 'Next' : 'Show Answer' }}</button>
+    <button tabindex="-1" @click="handleButtonPress">{{ hasShown ? 'Next' : 'Show Answer' }}</button>
   </div> 
 </template>
 
