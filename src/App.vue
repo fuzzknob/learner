@@ -36,18 +36,22 @@ function reset() {
 }
 
 function selectNote() {
-  let currentNote: Note
+  let nextNote: Note
   let index: number = -1 
   do {
-    const index = random(0, notes.value.length - 1)
-    currentNote = notes.value[index]
-  } while(currentNote?.id === note.value?.id)
-  note.value = currentNote 
-  if (currentNote.repeat === 0) {
-    notes.value = notes.value.filter((n, i) => i !== index)
+    index = random(0, notes.value.length - 1)
+    nextNote = notes.value[index]
+    if (notes.value.length === 1 && nextNote.repeat > 0) {
+      console.log(JSON.stringify(notes.value, null, 2))
+      nextNote.repeat = 0
+    }
+  } while(nextNote?.id === note.value?.id)
+  note.value = nextNote 
+  if (nextNote.repeat === 0) {
+   notes.value = notes.value.filter((n, i) => i !== index)
     return
   }
-  if (index !== -1) notes.value[index].repeat = currentNote.repeat - 1
+  if (index !== -1) notes.value[index].repeat = nextNote.repeat - 1
 }
 
 function handleButtonPress() {
